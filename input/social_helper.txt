@@ -1,0 +1,17 @@
+--------If show next, Do you have your original birth certificate?
+----------If no, you are not eligible to file for social security.
+----------If yes, do you have proof of U.S. Citizenship or lawful alien status if you were not born in the United States?
+------------If no, you are not eligible to file for social security.
+------------If yes, have you served in the United States military?
+--------------If yes, do you have your service papers?
+----------------If no, you are not eligible to file for social security.
+----------------If yes, do you have a copy of your W-2 forms and/or your self-employment tax returns?
+------------------If no, you are not eligible to file for social security.
+------------------If yes, do you have the name and address of your employer over the last two years and proof of income?
+--------------------If no, you are not eligible to file for social security.
+--------------------If yes, you qualify for social security benefits!
+--------------If no, do you have a copy of your W-2 forms and/or your self-employment tax returns?
+----------------If no, you are not eligible to file for social security.
+----------------If yes, do you have the name and address of your employer over the last two years and proof of income?
+------------------If yes, you qualify for social security benefits!
+------------------If no, you are not eligible to file for social security.
