@@ -1,0 +1,5 @@
+what is broken?
+--if doesn't turn on, check the battery
+--if its screen flashes, take to the store. Do they have to send it out?
+----if yes, ask for a loaner.
+----if no, go to the movies.
