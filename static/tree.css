@@ -1,0 +1,139 @@
+.mf_diagram_controlNodeContent {
+    box-shadow: rgba(0, 52, 102, 0.35) 4px 4px 4px;
+    text-align: center;
+    /* border: 1px solid #648dae;
+    background-color: #90caf9 !important; */
+
+    /* border: 1px solid #648dae; */
+    background-color: #eecda1 !important;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    /* width: 15em; */
+    /* left: 289.795px !important;
+    width: 375.26px !important; */
+    /* border: 5px solid #eecda1; */
+    /* border-radius: 25px; */
+    overflow-y: auto !important;
+}
+
+/* .mf_diagram_controlNodesContainer {
+    width: 3080px !important; 
+    height: 3080px !important;
+} */
+
+
+/* Two styles below ensures the scrollbar is visible */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+  
+::-webkit-scrollbar-thumb {
+border-radius: 4px;
+background-color: rgba(0, 0, 0, .5);
+box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+#d1 {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
+    height: 50px;
+    padding-top: 5px;
+    /* padding-bottom: 25px; */
+}
+
+body {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+table {
+    border-spacing: 0px;
+    margin-left: 10px;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    font-size: 12px;
+}
+
+select {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+td {
+    border-left: 1px solid gray;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+a {
+    word-break:break-all;
+}
+
+#result p {
+    word-break:break-all;
+}
+
+/* .searchbox {
+    background-color: lightgrey;
+    width: 40px;
+    height: 30px;
+    border: 15px solid #90caf9;
+    padding: 50px;
+    margin: 20px;
+    overflow: auto;
+} */
+
+#mydiv {
+    position: absolute;
+    z-index: 90;
+    width: 200px;
+    height: 100px;
+    top: 25px; 
+    right: 215px;
+    background-color: rgb(230, 229, 229);
+    /* border: 15px solid #90caf9; */
+    border: 15px solid #eecda1;
+    padding: 0px 50px 90px 50px;
+    overflow: auto;
+    border-radius: 25px;
+    /* 
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center; */
+}
+
+#mydivheader {
+    cursor: move;
+    position: fixed;
+    z-index: 91;
+    background-color: #eecda1;
+    text-align: center;
+    width: 200px; 
+    margin: auto;
+    /* background-color: rgb(230, 229, 229); */
+    /* padding: 10px;
+    z-index: 10;
+    /* background-color: #2196F3; */
+    /*color: #fff; */
+}
+
+/* #searchInput {
+    z-index: 1000;
+} */
+
+#select {
+    /* overflow: hidden; */
+    background-color: #eecda1;
+    text-align: center;
+    /* background-color: rgb(230, 229, 229); */
+    position: fixed; /* Set the navbar to fixed position */
+    /* Position the navbar at the top of the page */
+    width: 200px; 
+    
+    /* Full width */
+}
