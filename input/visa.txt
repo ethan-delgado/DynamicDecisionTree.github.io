@@ -1,0 +1,159 @@
+Are you here to apply for a visa? If so, Is your country on this list (https://visaguide.world/us-visa/nonimmigrant/visitor/visa-waiver-program/)
+--If Yes, you do not need a visa to enter the United States!
+--If No, what type of visa are you applying for?
+----If F1/F2 student visa, do you have a passport?
+------If Yes, have you ever been arrested or convicted for an offense or crime?
+--------If Yes, please consult the https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+--------If No, have you ever engaged in a conspiracy to violate any law relating to controlled substances?
+----------If Yes, please consult the https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+----------If No, have you ever been involved in money laundering?
+------------If Yes, please consult the https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+------------If No, you qualify for a student visa! The next steps of this process include sending a photograph, follow this site for guidelines: https://visaguide.world/us-visa/photo-requirements/. Lastly, you need to schedule an interview. Please visit this website for more information: https://visaguide.world/us-visa/fees/. 
+------If No, you do not qualify for a visa.
+----If B1/B2 visitor visa, is your intent for visiting the United States business-related?
+------If Yes, do you intend to return to your home country as soon as your visa expires?
+--------If Yes, do you have a passport?
+----------If Yes, have you ever been arrested or convicted for an offense or crime?
+------------If Yes, please consult the https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+------------If No, have you ever engaged in a conspiracy to violate any law relating to controlled substances?
+--------------If Yes, please consult the https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+--------------If No, you qualify for a business visa! Please consult https://visaguide.world/us-visa/nonimmigrant/visitor/b1/ to see the next steps in this process.
+----------If No, you do not qualify for a visa.
+------If No, you are applying for the wrong visa!
+----If M1 visa, have you been accepted by a Student Exchange Visitor Program?
+------If Yes, will you be able to finance your education and stay once you are in the United States?
+--------If Yes, you qualify for an M1 visa! Please visit https://visaguide.world/us-visa/nonimmigrant/study-exchange-visas/m1/ for more details.
+--------If No, sorry, you do not qualify for this type of visa. Please visit  https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+------If No, sorry, you do not qualify for this type of visa. Please visit  https://ceac.state.gov/genniv/ to see if you qualify for a visa.
+
+
+----If J1 visa, which role are you applying as?
+------If Au Pair, Are you between the age of 18-26 years old, proficient in English, and a secondary school graduate?
+--------If Yes, you qualify for a J1 visa! Please consult https://visaguide.world/us-visa/nonimmigrant/study-exchange-visas/j1/ to see the next steps in this process.
+--------If No, you do not qualify for this specific type of J1 visa. Perhaps you could see if you are eligible for other types of visas at https://visaguide.world/us-visa/ 
+------If Camp Counselor, are you at least 18 years old and proficient in English?
+--------If Yes, you qualify for a J1 visa! Please consult https://visaguide.world/us-visa/nonimmigrant/study-exchange-visas/j1/ to see the next steps in this process.
+--------If No, you do not qualify for this specific type of J1 visa. Perhaps you could see if you are eligible for other types of visas at https://visaguide.world/us-visa/ 
+------If Professor/Research Scholar, are you a candidate for a tenure track?
+--------If Yes, you do not qualify for this specific type of J1 visa. Perhaps you could see if you are eligible for other types of visas at https://visaguide.world/us-visa/ 
+--------If No, have you participated in a J1 visa program in the last 12 months?
+----------If Yes, you do not qualify for this specific type of J1 visa. Perhaps you could see if you are eligible for other types of visas at https://visaguide.world/us-visa/ 
+----------If No, have you been a part of a professorship program in the past 24 months?
+------------If Yes, you do not qualify for this specific type of J1 visa. Perhaps you could see if you are eligible for other types of visas at https://visaguide.world/us-visa/ 
+------------If No, you are eligible for a J1 visa! Please visit https://visaguide.world/us-visa/nonimmigrant/study-exchange-visas/j1/ to see your next steps in the process.
+------If not listed, please visit https://visaguide.world/us-visa/nonimmigrant/study-exchange-visas/j1/ to find the next steps in finding a J1 visa type that is specific to your needs.
+----If Q visa, are you at least 18 years old?
+------If Yes, are you knowledgeable or skillful enough to communicate the cultural aspects of your home country?
+--------If Yes, you must demonstrate that you're eligible to return to your home country once your Q visa expires. please continue with your application on this page https://https://visaguide.world/us-visa/nonimmigrant/study-exchange-visas/q1/
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If H1B visa, will your employer petition for you to receive an H1B visa?
+------If Yes, you must notify your employer that the deadline for petitions is March 2. Please continue with the next steps in your application at this page https://https://visaguide.world/us-visa/nonimmigrant/employment/h1b/
+------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If O-type visa, which O visa are you applying for?
+------If O1 visa, would you consider yourself to have extraordinary expertise in your speciality?
+--------If Yes, you must follow the steps on this page, https://visaguide.world/us-visa/nonimmigrant/employment/o1/. Your employer will have to file a petition with the USCIS on your behalf.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If O2 visa, are you an assistant to someone of extraordinary expertise in their respective field?
+--------If Yes, you must be a "critical" member of the performance or work of the O1 visa holder. If you consider yourself such a candidate continue with the steps on this page https://visaguide.world/us-visa/nonimmigrant/employment/o1/o2/ 
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If O3 visa, are you an immediate family member of an O1 visa or O2 visa holder?
+--------If yes, you qualify for an O3 visa and should continue with your application on this page https://visaguide.world/us-visa/nonimmigrant/employment/o1/o3/.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas. 
+----If P-type visa, are you a part of an internationally recognized sports organization or entertainment group?
+------If Yes, please visit https://visaguide.world/us-visa/nonimmigrant/employment/p1/ for the next steps in your application 
+------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas. 
+----If I visa, which I-type visa are you applying for?
+------If IR1 visa, are you the spouse or child of a US citizen?
+--------If Yes, please visit  https://visaguide.world/us-visa/green-card/marriage/ for the next steps in your visa application.
+--------If No, 
+------If IR2 visa, are you under 21 years old?
+--------If Yes, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If No, are you unmarried?
+----------If Yes, are you currently living in a foreign country, or have you been living with adoptive US citizen parents for at least 2 years?
+------------If Yes, please visit https://visaguide.world/us-visa/immigrant/ir2/ to continue with the next steps of your application.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If IR3 visa, do you plan to adopt a child from a foreign country?
+--------If Yes, is the child from a "Hague" adoption country (list of hague adoption countries, https://visaguide.world/us-visa/immigrant/ir3/.?)?
+----------If Yes, is the child under 21 years old?
+------------If Yes, do you have a valid US address?
+--------------If Yes, please visit https://visaguide.world/us-visa/immigrant/ir3/ to follow the process of applying for an IR3 visa for a child from a Hague country.
+--------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/immigrant/ir3/ to read about the process of adopting a child from a non-hague adoption country.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If IR4 visa, is the child from a "Hague" adoption country (list of hague adoption countries, https://visaguide.world/us-visa/immigrant/ir3/.?)?
+--------If Yes, is the child under 21 years old?
+----------If Yes, do you have a valid US address?
+------------If Yes, please visit https://visaguide.world/us-visa/immigrant/ir4/ to read about adopting a child from a Hague country.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If No, If No, please visit https://visaguide.world/us-visa/immigrant/ir3/ to read about the process of adopting a child from a non-hague adoption country.
+----If E-type visa, which type of E-type visa are you applying for?
+------If E1 type visa, are you involved with international trade?
+--------If Yes, does your home country have a trade treaty with the US?
+----------If Yes, do you hold a senior position such as director, manager, supervisor, or executive?
+------------If Yes, you qualify for an E1 visa! Please visit https://visaguide.world/us-visa/nonimmigrant/e1/ to see the next steps in the process of applying for a visa.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If E2 type visa, are you an individual investor or a company?
+--------If individual, are you from a country that has an investment treaty with the US?
+----------If Yes, do you have the intent to invest a substantial amount of capital into a bona fide business?
+------------If Yes, do you have the goal of developing the business further through that investment?
+--------------If Yes, do you understand and agree to put the funds for the investment in an account until the visa is approved?
+----------------If Yes, you qualify for an E2 visa!, please visit https://visaguide.world/us-visa/nonimmigrant/e2/ to see the next steps in the process.
+----------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If company, is your company owned by at least 50% of people from a treaty investment country?
+----------If Yes, do you have the intent to invest a substantial amount of capital into a bona fide business?
+------------If Yes, do you have the goal of developing the business further through that investment?
+--------------If Yes, do you understand and agree to put the funds for the investment in an account until the visa is approved?
+----------------If Yes, you qualify for an E2 visa!, please visit https://visaguide.world/us-visa/nonimmigrant/e2/ to see the next steps in the process.
+----------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If U visa, are you a victim of one of the crimes listed here, https://visaguide.world/us-visa/nonimmigrant/u-visa/ ?
+------If Yes, have you suffered physical or mental illness as a result of this crime?
+--------If Yes, are you willing to cooperate with the US government regarding this crime?
+----------If Yes, do you have information about the crime that you are able to share with the US government?
+------------If Yes, you may qualify for a U visa! please visit https://visaguide.world/us-visa/nonimmigrant/u-visa/ to see the next steps in the application process.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If F22-type visa, which F22-type visa are you applying for?
+------If F22A, are you under the age of 21 years old?
+--------If Yes, are you unmarried?
+----------If Yes, are you able to prove your relationship with your visa sponsor in the United States?
+------------If Yes, you may qualify for an F2A visa! Please visit https://visaguide.world/us-visa/immigrant/f2a/ to see the next steps in the application process.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If F22B, are you the child of a US Lawful Permanent Resident?
+--------If Yes, are you over the age of 21 years old?
+----------If Yes, are you unmarried?
+------------If Yes, you may qualify for an F2B visa! Please visit https://visaguide.world/us-visa/immigrant/f2b/ to see the next steps in the application process for an F2B visa.
+------------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If K3 visa, are you legally married to a US citizen?
+------If Yes, has your significant other filed an I-130 form in your name?
+--------If Yes, you may qualify for a K3 visa! Please visit https://visaguide.world/us-visa/immigrant/k3/ to see the next steps in your application process.
+--------If No, has your significant other filed an I-130 form in your name if so you continue in the application process for a K3 visa.
+------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If EB1 visa, 1) You have extraordinary abilities in arts, sciences, education, athletics, and business, 2) You have outstanding professors and researchers who have received international recognition for your contribution in your field, 3) You are a multinational manager or executive who has been working for an international branch of a US company for at least 1 year. Do you have one of the previous characteristics?
+------If 1, please visit https://visaguide.world/us-visa/immigrant/eb1/ to see if you have any of the qualifying accolades on this list. Do you have any of the previous accolades?
+--------If Yes, you may qualify for an EB1 visa. Please visit https://visaguide.world/us-visa/immigrant/eb1/ to see the next steps in the application process.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If 2, please visit https://visaguide.world/us-visa/immigrant/eb1/ to see if you have any of the qualifying accolades on this list. Do you have any of the previous accolades?
+--------If Yes, you may qualify for an EB1 visa. Please visit https://visaguide.world/us-visa/immigrant/eb1/ to see the next steps in the application process. 
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If 3, please visit https://visaguide.world/us-visa/immigrant/eb1/ to see if you have any of the qualifying accolades on this list. Do you have any of the previous accolades?
+--------If Yes, you may qualify for an EB1 visa. Please visit https://visaguide.world/us-visa/immigrant/eb1/ to see the next steps in the application process.
+--------If No, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+------If None, please visit https://visaguide.world/us-visa/ to see if you qualify for other visas.
+----If visa not listed, please consult this website https://visaguide.world/us-visa/ to see if you qualify for a visa.
