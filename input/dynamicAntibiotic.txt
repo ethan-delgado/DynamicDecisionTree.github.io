@@ -1,0 +1,13 @@
+What is your condition?
+--if acute rhinosinusitis, are you allergic to penicillin?
+----if yes, doxycycline or a respiratory fluoroquinolone (levofloxacin or moxifloxacin)
+----if no, Amoxicillin or amoxicillin/clavulanate
+--if Acute uncomplicated bronchitis, then don't take antibiotics
+--if cold or respiratory infection, then don't take antibiotics
+--if Pharyngitis, then don't take antibiotics
+--if Group A beta-hemolytic streptococcal (GAS) infection, are you allergic to penicillin?
+----if yes, cephalexin, cefadroxil, clindamycin, or macrolides 
+----if no, Amoxicillin and penicillin V
+--if Acute uncomplicated cystitis, are you a healthy non-pregnant premenopausal woman?
+----if yes, then Nitrofurantoin, trimethoprim/sulfamethoxazole (TMP-SMX, where local resistance is <20%), and fosfomycin are appropriate first-line agents.
+----if no, then either no antibiotics or Fluoroquinolones (e.g. ciprofloxacin)
