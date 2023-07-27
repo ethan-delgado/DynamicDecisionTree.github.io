@@ -1,0 +1,43 @@
+Are you dealing with a right triangle?
+--If Yes, What are you asked to find?
+----If Side length, Are you given the other 2 side lengths?
+------If Yes, Solve for a^2 + b^2 = c^2 where a and b are the respective leg lengths and c is the hypotenuse length (Ex: If a = 3, b = 4, find c: c = sqrt(3² + 4²) = 5).
+------If No, Are you given a side length and an angle?
+--------If Yes, Are you given the hypotenuse or a leg??
+----------If Hypotenuse, Are you asked to find the side length adjacent or opposite to the given angle?
+------------If Adjacent, Calculate the length of the leg by multiplying the hypotenuse length by the cosine of the given angle (Ex: If Hypotenuse = 5, angle = 60°, find Adjacent side: Adjacent = 5 * cos(60°) = 2.5).
+------------If Opposite, Calculate the length of the leg by multiplying the hypotenuse length by the sine of the given angle (Ex: If Hypotenuse = 5, angle = 60°, find Opposite side: Opposite = 5 * sin(60°) ≈ 4.33).
+----------If Leg, Is the given angle adjacent or opposite to the leg whose length you are asked to find?
+------------If Adjacent, Calculate the length of the missing side by dividing the length of the given leg by the cosine of the given angle (Ex: If Adjacent side = 3, angle = 60°, find Hypotenuse: Hypotenuse = 3 / cos(60°) = 6).
+------------If Opposite, Calculate the length of the missing side by dividing the length of the given leg by the sine of the given angle (Ex: If Opposite side = 3, angle = 60°, find Hypotenuse: Hypotenuse = 3 / sin(60°) ≈ 3.46).
+--------Try to use other methods to gain more information and help you find the side length.
+----If Angle, Are you given the length of the 2 sides of the triangle?
+------If Yes, Which 2 side lengths were you given?
+--------If 2 legs, Calculate the angle by taking the arctangent of the leg length opposite the angle divided by the leg length adjacent to the angle (Ex: If Opposite side = 4, Adjacent side = 3, find angle: Angle = arctan(4/3) ≈ 53.13°).
+--------If 1 leg and 1 hypotenuse, Is the given leg length adjacent or opposite to the angle you are trying to find?
+----------If Adjacent, Calculate the angle by taking the arccosine of the leg length adjacent to the angle divided by the length of the hypotenuse (Ex: If Adjacent side = 3, Hypotenuse = 5, find angle: Angle = arccos(3/5) ≈ 53.13°).
+----------If Opposite, Calculate the angle by taking the arcsine of the leg length opposite the angle divided by the length of the hypotenuse (Ex: If Opposite side = 4, Hypotenuse = 5, find angle: Angle = arcsin(4/5) ≈ 53.13°).
+------If No, Are you given the other acute angle?
+--------If Yes, Calculate the the angle by subtracting the given acute angle from 90 (Ex: If one acute angle is 30°, find other acute angle: Other Angle = 90 - 30 = 60°)
+--------If No, Try to use other methods to gain more information and help you find the angle.
+----If Area, Are you given the lengths of two sides that form the right angle?
+------If Yes, Calculate the area as 1/2 * base * height (Ex: If base = 4 and height = 3, Area = 1/2 * 4 * 3 = 6).
+------If No, Try to use other methods to gain more information and help you find the area.
+----If Height, Are you given the length of the hypotenuse and an angle?
+------If Yes, Calculate the height as hypotenuse * sin(angle) (Ex: If hypotenuse = 5 and angle = 60°, height = 5 * sin(60°) ≈ 4.33).
+------If No, Try to use other methods to gain more information and help you find the height.
+--If No, What are you asked to find?
+----If Side length, Are you given all three angles and one side or two sides and one included angle?
+------If All three angles and one side, Use the Law of Sines to find the unknown side: a/sin(A) = b/sin(B) = c/sin(C) (Ex: If angle A = 30°, side a = 2, angle B = 60°, find side b: b = sin(60°) * (2 / sin(30°)) = 4)
+------If Two sides and one included angle, Use the Law of Cosines to find the unknown side: c² = a² + b² - 2abcos(C) (Ex: If a = 3, b = 4, angle C = 60°, find c: c = sqrt(3² + 4² - 2 * 3 * 4cos(60°)) = 1).
+----If Angle, Are you given all three sides or two angles?
+------If All three sides, Use the Law of Cosines to find the unknown angle: Take the arccosine of [a² + b² - c²] / 2ab to find the unknown angle (Ex: If a = 3, b = 4, c = 5, find angle A: A = arccos((3² + 4² - 5²) / (2*3*4)) ≈ 36.87°)
+------If Two angles, Subtract the sum of the two known angles from 180° to find the unknown angle (Ex: If angle A = 60° and angle B = 50°, find angle C: C = 180 - 60 - 50 = 70°).
+----If Area, Are you given two sides and the included angle?
+------If Yes, Use the formula 1/2 * a * b * sin(C) to find the area (Ex: If a = 3, b = 4, and C = 60°, Area = 1/2 * 3 * 4 * sin(60°) = 3.46).
+------If No, Are you given all three sides?
+--------If Yes, Use Heron's formula to find the area: sqrt[s(s - a)(s - b)(s - c)] where s is half the perimeter of the triangle given by (a + b + c) / 2 (Ex: If a = 2, b = 3, and c = 4, s = (2 + 3 + 4) / 2 = 4.5, then Area = sqrt[4.5(4.5 - 2)(4.5 - 3)(4.5 - 4)] = 2.9).
+--------If No, Try to use other methods to gain more information and help you find the area.
+----If Height, Are you given the longest side and its opposite angle?
+------If Yes, Use the relationship h = a * sin(B) where h is the height, a is the side length, and B is the opposite angle (Ex: If a = 3 and B = 60°, height = 3 * sin(60°) ≈ 2.6).
+------If No, Try to use other methods to gain more information and help you find the height.
