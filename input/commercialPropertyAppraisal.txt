@@ -1,0 +1,33 @@
+Does the commercial property being appraised have a valid legal description?
+--If Yes, Can you physically inspect the property, both the interior and exterior?
+----If Yes, Have you evaluated the structural integrity of the property (foundation, roof, façade, etc.) and its building systems such as HVAC, electrical, and plumbing?
+------If Yes, Have you determined the value of the land itself, based on prices of similar commercial vacant lots in the area?
+--------If Yes, Have you accounted for local commercial amenities (proximity to transportation hubs, business districts, commercial services) and unique commercial features (loading docks, commercial kitchens, conference rooms)?
+----------If Yes, Have you assessed the impact of zoning laws or use restrictions on the property's value (e.g. limits on height or business type)?
+------------If Yes, Have you factored in any future developments (e.g. new transport links or business parks) that could affect the property's value?
+--------------If Yes, Can you find recently sold commercial properties (known as comparables) similar in function, location, size, and condition?
+----------------If Yes, Can you adjust the value of the comparables for differences like square footage, commercial facilities, or parking spaces?
+------------------If Yes, Have you conducted a market trend analysis for commercial properties in the area (checking if commercial property values are rising or declining)?
+--------------------If Yes, Based on this trend analysis, are your adjustments to the comparables justifiable (e.g., adjusting price due to an uptick in local business growth)?
+----------------------If Yes, Have you verified all gathered data (checking specifics like total floor space, tenant capacity, etc.) and reflected on the property's historical commercial value (past lease rates, sales prices)?
+------------------------If Yes, Complete your appraisal report, factoring in everything previously mentioned. Adjust the valuation using comparables' prices and differing features (e.g.: If the subject property has a larger parking lot, add $20,000 to the comparable's price)
+------------------------If No, Confirm your data, reconsider its historical commercial value, then compile your report. Adjust the valuation using the prices of comparables and distinct features (e.g.: If the subject property is closer to a major highway, add $15,000 to the comparable's price)
+----------------------If No, Reassess your market trend analysis and adjust the comparables. After that, redo the decision tree (e.g.: If businesses are relocating out of the area, reduce the comparable's value by 10%)
+--------------------If No, Undertake a fresh market trend analysis and adjust the comparables. Redo the decision tree afterward. (e.g.: Examine the past year's leasing trends in the commercial district and adjust comparables)
+------------------If No, Which valuation method will you employ for the commercial property?
+--------------------If Cost approach, Have you confirmed all details like property size, tenant capacity, etc.?
+----------------------If Yes, Submit your appraisal report with the collected details. Calculate the final valuation by estimating today's cost of constructing a similar commercial building and accounting for depreciation (e.g.: If constructing a similar building costs $1M today and depreciation is $100K, valuation is $900K)
+----------------------If No, Reconfirm all details. Afterwards, compile your report with the present cost of constructing a similar commercial building, taking into account depreciation (e.g.: If construction costs are $1.2M and depreciation is $200K, valuation is $1M)
+--------------------If Income Approach, Have you confirmed all details like property size, potential lease rates, etc.?
+----------------------If Yes, Compile your appraisal report. Calculate the valuation by estimating net operating income from similar commercial rentals and dividing it by the capitalization rate (e.g.: If net income is $50K and the capitalization rate is 5%, valuation is $1M)
+----------------------If No, Recheck all details. Then, compile your report, estimating net operating income from similar commercial rentals and dividing it by the capitalization rate (e.g.: If net income is $60K and the capitalization rate is 6%, valuation is $1M)
+----------------If No, Which valuation approach will you use for the commercial property?
+------------------If Cost approach, Calculate the final valuation by estimating the present cost of constructing a similar commercial property, factoring in depreciation (e.g.: If today's construction cost is $1.5M and depreciation is $250K, valuation is $1.25M)
+------------------If Income Approach, Calculate the valuation by estimating net income based on similar commercial rentals, then dividing by the capitalization rate (e.g.: If net income is $70K and the capitalization rate is 7%, valuation is $1M)
+--------------If No, Confirm any forthcoming developments and their potential impact on commercial property value. Redo the decision tree (e.g.: Factor in the potential value increase if a business park is being developed nearby)
+------------If No, Examine any zoning laws or use restrictions for the commercial property and their potential impact. Redo the decision tree (e.g.: If the property is zoned only for retail, adjust the valuation)
+----------If No, Assess local commercial amenities, special features, and environmental factors impacting value. Redo the decision tree (e.g.: Value may increase if it's close to a major convention center)
+--------If No, Gauge the value of the land based on similar commercial vacant lots. Redo the decision tree (e.g.: If commercial lots are selling for $200K, factor this in)
+------If No, Inspect the property's structural integrity and systems, then return to the decision tree (e.g.: Ensure the HVAC system is adequate for the building size)
+----If No, Attempt to obtain access from the property owner for inspection. Afterwards, redo the decision tree (e.g.: Coordinate a site visit at a time convenient for existing tenants)
+--If No, First, get a legal description for the commercial property. Once obtained, redo the decision tree (e.g.: Liaise with local authorities or consult legal documentation for the correct legal description)

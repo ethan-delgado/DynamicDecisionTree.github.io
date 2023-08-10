@@ -129,6 +129,58 @@ def get_sql():
     # sql_command = """INSERT INTO houses VALUES (3, "Lipton Hall", 3, 3300, 'N');"""
     # crsr.execute(sql_command)
 
+
+    sql_command = """CREATE DATABASE PropertyAppraisal;"""
+    crsr.execute(sql_command)
+
+    sql_command = """USE PropertyAppraisal;"""
+    crsr.execute(sql_command)
+
+    sql_command = """CREATE TABLE Property (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    legal_description TEXT NOT NULL,
+    address VARCHAR(255),
+    size FLOAT,
+    age INT
+    );"""
+    crsr.execute(sql_command)
+
+    sql_command = """CREATE TABLE ComparableSales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    property_id INT,
+    comparable_address VARCHAR(255),
+    sale_date DATE,
+    sale_price FLOAT,
+    FOREIGN KEY (property_id) REFERENCES Property(id)
+    );
+    """
+    crsr.execute(sql_command)
+
+    sql_command = """CREATE TABLE AppraisalMethodology (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    property_id INT,
+    methodology_type ENUM('Comparables Approach', 'Cost Approach', 'Income Approach'),
+    FOREIGN KEY (property_id) REFERENCES Property(id)
+    ;
+    """
+    crsr.execute(sql_command)
+
+
+    sql_command = """CREATE TABLE FinalValuation (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    property_id INT,
+    estimated_value FLOAT,
+    valuation_date DATE,
+    FOREIGN KEY (property_id) REFERENCES Property(id)
+    );
+    """
+    crsr.execute(sql_command)
+
+    sql_command = """INSERT INTO Property (legal_description, address, size, age) VALUES ('Legal Description Here', '123 Main St, City, Country', 2000, 10);"""
+    crsr.execute(sql_command)
+
+
+
     crsr.execute(result['0'])
     sql_ans = crsr.fetchall()
 
