@@ -84,114 +84,214 @@ def get_subtree():
     f.write('\n')
     return result
 
+# def get_sql():
+#     print("get_sql is called")
+#     # Retrieve the SQL query from the request data
+#     output = request.get_json()
+#     print(output)
+#     query_to_execute = output['0']
+
+#     # connecting to the database
+#     connection = sqlite3.connect("dt.db")
+    
+#     # cursor
+#     crsr = connection.cursor()
+    
+#     # print statement will execute if there are no errors
+#     print("Connected to the database")
+
+#     try:
+#         crsr.execute(query_to_execute)
+#         sql_ans = crsr.fetchall()
+
+#         for i in sql_ans:
+#             print(i)
+#     except Exception as e:
+#         # Log the exception for debugging purposes
+#         print(f"Error executing query: {e}")
+#         # Return an error response
+#         return jsonify(error=str(e)), 400
+
+#     finally:
+#         # close the connection
+#         connection.close()
+
+#     return jsonify('', render_template('sql.html', x=sql_ans))
 
 @app.route('/get_sql', methods=['POST'])
+
 def get_sql():
-    # connect to the database, create a table in the database(I have commented it, so it won't create duplicate table),
-    # and execute the sql command sent from the tree.js through ajax.
-    # it is called when the text in the new box is a sql command.
-    # output: send the result of the sql command back to tree.js 
-    output = request.get_json()
-    print(output)
-    print(type(output))
-    result = json.loads(output)
-    print(result)
-    print(type(result))
- 
-    # connecting to the database
-    connection = sqlite3.connect("dt.db")
-    
-    # cursor
+    print("get_sql is running")
+    # Connect to SQLite database (will create new file if it doesn't exist)
+    connection = sqlite3.connect('residentialPropertyAppraisal.db')
     crsr = connection.cursor()
-    
-    # print statement will execute if there
-    # are no errors
-    print("Connected to the database")
-    
-    # # SQL command to create a table in the database
-    # sql_command = """CREATE TABLE houses (
-    # house_number INTEGER PRIMARY KEY,
-    # house_name VARCHAR(30),
-    # num_of_bedrooms INTEGER,
-    # square_feet INTEGER,
-    # swimming_pool CHAR(1));"""
-    # crsr.execute(sql_command)
 
-    # # SQL command to insert the data in the table
-    # sql_command = """INSERT INTO houses VALUES (1, "Goddard Hall", 1, 1600, 'N');"""
-    # crsr.execute(sql_command)
-    
-    # # another SQL command to insert the data in the table
-    # sql_command = """INSERT INTO houses VALUES (2, "Palladium Hall", 2, 3100, 'Y');"""
-    # crsr.execute(sql_command)
-
-    # # another SQL command to insert the data in the table
-    # sql_command = """INSERT INTO houses VALUES (3, "Lipton Hall", 3, 3300, 'N');"""
-    # crsr.execute(sql_command)
-
-
-    sql_command = """CREATE DATABASE PropertyAppraisal;"""
-    crsr.execute(sql_command)
-
-    sql_command = """USE PropertyAppraisal;"""
-    crsr.execute(sql_command)
-
-    sql_command = """CREATE TABLE Property (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    legal_description TEXT NOT NULL,
-    address VARCHAR(255),
-    size FLOAT,
-    age INT
-    );"""
-    crsr.execute(sql_command)
-
-    sql_command = """CREATE TABLE ComparableSales (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    property_id INT,
-    comparable_address VARCHAR(255),
-    sale_date DATE,
-    sale_price FLOAT,
-    FOREIGN KEY (property_id) REFERENCES Property(id)
+    # Create Property table
+    sql_command = """
+    CREATE TABLE IF NOT EXISTS Property (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        legal_description TEXT NOT NULL,
+        address TEXT,
+        size REAL,
+        age INTEGER
     );
     """
     crsr.execute(sql_command)
 
-    sql_command = """CREATE TABLE AppraisalMethodology (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    property_id INT,
-    methodology_type ENUM('Comparables Approach', 'Cost Approach', 'Income Approach'),
-    FOREIGN KEY (property_id) REFERENCES Property(id)
-    ;
-    """
-    crsr.execute(sql_command)
-
-
-    sql_command = """CREATE TABLE FinalValuation (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    property_id INT,
-    estimated_value FLOAT,
-    valuation_date DATE,
-    FOREIGN KEY (property_id) REFERENCES Property(id)
+    # Create ComparableSales table
+    sql_command = """
+    CREATE TABLE [IF NOT EXISTS] ComparableSales (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        property_id INTEGER,
+        comparable_address TEXT,
+        sale_date TEXT,
+        sale_price REAL,
+        FOREIGN KEY (property_id) REFERENCES Property(id)
     );
     """
     crsr.execute(sql_command)
 
-    sql_command = """INSERT INTO Property (legal_description, address, size, age) VALUES ('Legal Description Here', '123 Main St, City, Country', 2000, 10);"""
+    # Create AppraisalMethodology table
+    sql_command = """
+    CREATE TABLE [IF NOT EXISTS] AppraisalMethodology (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        property_id INTEGER,
+        methodology_type TEXT CHECK(methodology_type IN ('Comparables Approach', 'Cost Approach', 'Income Approach')),
+        FOREIGN KEY (property_id) REFERENCES Property(id)
+    );
+    """
     crsr.execute(sql_command)
 
+    # Create FinalValuation table
+    sql_command = """
+    CREATE TABLE [IF NOT EXISTS] FinalValuation (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        property_id INTEGER,
+        estimated_value REAL,
+        valuation_date TEXT,
+        FOREIGN KEY (property_id) REFERENCES Property(id)
+    );
+    """
+    crsr.execute(sql_command)
 
+    # Insert sample data
+    sql_command = """
+    INSERT INTO Property (legal_description, address, size, age) VALUES ('Legal Description Here', '123 Main St, City, Country', 2000, 10);
+    """
+    crsr.execute(sql_command)
 
-    crsr.execute(result['0'])
-    sql_ans = crsr.fetchall()
-
-    for i in sql_ans:
-        print(i)
-    
-    # close the connection
+    # Commit changes and close connection
+    connection.commit()
     connection.close()
 
-    return jsonify('', render_template('sql.html', x = sql_ans))
+    
 
+# def get_sql():
+#     print("get_sql  is running")
+#     # connect to the database, create a table in the database(I have commented it, so it won't create duplicate table),
+#     # and execute the sql command sent from the tree.js through ajax.
+#     # it is called when the text in the new box is a sql command.
+#     # output: send the result of the sql command back to tree.js 
+#     output = request.get_json()
+#     print(output)
+#     print(type(output))
+#     result = json.loads(output)
+#     print(result)
+#     print(type(result))
+ 
+#     # connecting to the database
+#     connection = sqlite3.connect("dt.db")
+    
+#     # cursor
+#     crsr = connection.cursor()
+    
+#     # print statement will execute if there
+#     # are no errors
+#     print("Connected to the database")
+    
+#     # # SQL command to create a table in the database
+#     # sql_command = """CREATE TABLE houses (
+#     # house_number INTEGER PRIMARY KEY,
+#     # house_name VARCHAR(30),
+#     # num_of_bedrooms INTEGER,
+#     # square_feet INTEGER,
+#     # swimming_pool CHAR(1));"""
+#     # crsr.execute(sql_command)
+
+#     # # SQL command to insert the data in the table
+#     # sql_command = """INSERT INTO houses VALUES (1, "Goddard Hall", 1, 1600, 'N');"""
+#     # crsr.execute(sql_command)
+    
+#     # # another SQL command to insert the data in the table
+#     # sql_command = """INSERT INTO houses VALUES (2, "Palladium Hall", 2, 3100, 'Y');"""
+#     # crsr.execute(sql_command)
+
+#     # # another SQL command to insert the data in the table
+#     # sql_command = """INSERT INTO houses VALUES (3, "Lipton Hall", 3, 3300, 'N');"""
+#     # crsr.execute(sql_command)
+
+
+#     sql_command = """CREATE DATABASE PropertyAppraisal;"""
+#     crsr.execute(sql_command)
+
+#     sql_command = """USE PropertyAppraisal;"""
+#     crsr.execute(sql_command)
+
+#     sql_command = """CREATE TABLE Property (
+#     id INT AUTO_INCREMENT PRIMARY KEY,
+#     legal_description TEXT NOT NULL,
+#     address VARCHAR(255),
+#     size FLOAT,
+#     age INT
+#     );"""
+#     crsr.execute(sql_command)
+
+#     sql_command = """CREATE TABLE ComparableSales (
+#     id INT AUTO_INCREMENT PRIMARY KEY,
+#     property_id INT,
+#     comparable_address VARCHAR(255),
+#     sale_date DATE,
+#     sale_price FLOAT,
+#     FOREIGN KEY (property_id) REFERENCES Property(id)
+#     );
+#     """
+#     crsr.execute(sql_command)
+
+#     sql_command = """CREATE TABLE AppraisalMethodology (
+#     id INT AUTO_INCREMENT PRIMARY KEY,
+#     property_id INT,
+#     methodology_type ENUM('Comparables Approach', 'Cost Approach', 'Income Approach'),
+#     FOREIGN KEY (property_id) REFERENCES Property(id)
+#     ;
+#     """
+#     crsr.execute(sql_command)
+
+
+#     sql_command = """CREATE TABLE FinalValuation (
+#     id INT AUTO_INCREMENT PRIMARY KEY,
+#     property_id INT,
+#     estimated_value FLOAT,
+#     valuation_date DATE,
+#     FOREIGN KEY (property_id) REFERENCES Property(id)
+#     );
+#     """
+#     crsr.execute(sql_command)
+
+#     sql_command = """INSERT INTO Property (legal_description, address, size, age) VALUES ('Legal Description Here', '123 Main St, City, Country', 2000, 10);"""
+#     crsr.execute(sql_command)
+
+
+
+#     crsr.execute(result['0'])
+#     sql_ans = crsr.fetchall()
+
+#     for i in sql_ans:
+#         print(i)
+    
+#     # close the connection
+#     connection.close()
+
+#     return jsonify('', render_template('sql.html', x = sql_ans))
 
 
 if __name__ == "__main__":

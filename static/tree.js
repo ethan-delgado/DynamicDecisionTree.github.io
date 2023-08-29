@@ -265,6 +265,7 @@ function nextoption(id, originNode) {
     var node = new MindFusion.Diagramming.ControlNode(diagram);
     let len = str[id].search(',');
     let s = str[id].substring(len + 1, str[id].length);
+    console.log("Current Node: " + s);
 
     // detect if the text contains link and add hypertext reference to the link
     let s_len = s.search("https");
@@ -288,7 +289,9 @@ function nextoption(id, originNode) {
     if(s.includes("SQL")) {
         // We need this myCallback function because the code in ajax runs asynchronously. 
         // We use this function to help receive the result from python
+        console.log("Question includes SQL");
         function myCallback(sql_result) {
+            console.log("myCallback is running");
 
             console.log("check sql_result[1]: "  + sql_result[1]);
             
@@ -368,6 +371,7 @@ function nextoption(id, originNode) {
         get_sql_result(myCallback);
 
         function get_sql_result(callback) { 
+            console.log("get_sql_result function 1 is running");
             let len2 = s.search('SQL:');
             let query = s.substring(len2 + 5, s.length); // plus 5 to skip 'SQL: ' 
             console.log(query);
@@ -585,7 +589,8 @@ function notSure(id, originNode) {
                     console.log(query);
                     let query_list = [];
                     query_list.push(query);
-                    let query_dic = Object.assign({}, query_list);
+                    let query_dic = Object.assign({}, query_list); 
+                    console.log("Query dictionary: " + query_dic);
                     const s2 = JSON.stringify(query_dic);
                     $.ajax({
                         url:"/get_sql",
@@ -783,6 +788,7 @@ function showCheckbox(id, originNode, results) {
                     get_sql_result(myCallback);
 
                     function get_sql_result(callback) { 
+                        console.log("get_sql_result function 2 is running");
                         let len2 = s.search('SQL:');
                         let query = s.substring(len2 + 5, s.length); // plus 5 to skip 'SQL: ' 
                         console.log(query);

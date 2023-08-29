@@ -10,7 +10,7 @@ Are you dealing with a right triangle?
 ----------If Leg, Is the given angle adjacent or opposite to the leg whose length you are asked to find?
 ------------If Adjacent, Calculate the length of the missing side by dividing the length of the given leg by the cosine of the given angle (Ex: If Adjacent side = 3, angle = 60°, find Hypotenuse: Hypotenuse = 3 / cos(60°) = 6).
 ------------If Opposite, Calculate the length of the missing side by dividing the length of the given leg by the sine of the given angle (Ex: If Opposite side = 3, angle = 60°, find Hypotenuse: Hypotenuse = 3 / sin(60°) ≈ 3.46).
---------Try to use other methods to gain more information and help you find the side length.
+--------If No, Try to use other methods to gain more information and help you find the side length.
 ----If Angle, Are you given the length of the 2 sides of the triangle?
 ------If Yes, Which 2 side lengths were you given?
 --------If 2 legs, Calculate the angle by taking the arctangent of the leg length opposite the angle divided by the leg length adjacent to the angle (Ex: If Opposite side = 4, Adjacent side = 3, find angle: Angle = arctan(4/3) ≈ 53.13°).
@@ -41,3 +41,19 @@ Are you dealing with a right triangle?
 ----If Height, Are you given the longest side and its opposite angle?
 ------If Yes, Use the relationship h = a * sin(B) where h is the height, a is the side length, and B is the opposite angle (Ex: If a = 3 and B = 60°, height = 3 * sin(60°) ≈ 2.6).
 ------If No, Try to use other methods to gain more information and help you find the height.
+----If Solution To Trigonometric Equation/Expression, Which identity or formula category does it belong to?
+------If Pythagorean (Ex: cos^2(θ) + sin^2(θ) = ?), Do you know sin(θ) or cos(θ)?
+--------If sin(θ) (Ex: sin(θ) = 0.6), Use the identity: cos(θ) = sqrt(1 - sin^2(θ)) (Ex: If sin(θ) = 0.6, cos(θ) = sqrt(1 - 0.6^2) = 0.8).
+--------If cos(θ) (Ex: cos(θ) = 0.5), Use the identity: sin(θ) = sqrt(1 - cos^2(θ)) (Ex: If cos(θ) = 0.5, sin(θ) = sqrt(1 - 0.5^2) = 0.87).
+------If Angle Sum or Difference (Ex: sin(45° + 30°) = ?), Are you working with sine, cosine, or tangent?
+--------If Sine (Ex: sin(45° + 30°) = ?), Use the identity: sin(A ± B) = sin(A)cos(B) ± cos(A)sin(B) (Ex: If A = 30° and B = 60°, sin(A + B) = sin(30°)cos(60°) + cos(30°)sin(60°)).
+--------If Cosine (Ex: cos(45° - 30°) = ?), Use the identity: cos(A ± B) = cos(A)cos(B) ± sin(A)sin(B) (Ex: If A = 30° and B = 60°, cos(A - B) = cos(30°)cos(60°) + sin(30°)sin(60°)).
+--------If Tangent (Ex: tan(45° + 30°) = ?), Use the identity: tan(A ± B) = (tan(A) ± tan(B)) / (1 ± tan(A)tan(B)) (Ex: If A = 45° and B = 30°, tan(A + B) = (tan(45°) + tan(30°)) / (1 - tan(45°)tan(30°))).
+------If Double Angle (Ex: sin(230°) = ?), Are you working with sine, cosine, or tangent?
+--------If Sine (Ex: sin(230°) = ?), Use the identity: sin(2θ) = 2sin(θ)cos(θ) (Ex: If θ = 30°, sin(2θ) = 2sin(30°)cos(30°)).
+--------If Cosine (Ex: cos(230°) = ?), Use the identity: cos(2θ) = cos^2(θ) - sin^2(θ) or 2cos^2(θ) - 1 or 1 - 2sin^2(θ) (Ex: If θ = 30°, cos(2θ) = 2cos^2(30°) - 1).
+--------If Tangent (Ex: tan(230°) = ?), Use the identity: tan(2θ) = (2tan(θ)) / (1 - tan^2(θ)) (Ex: If θ = 30°, tan(2θ) = 2tan(30°) / (1 - tan^2(30°))).
+------If Product-to-Sum (Ex: 2sin(30°)sin(45°) = ?), Are you working with sine, cosine, or a mix of both?
+--------If Sine (Ex: 2sin(30°)sin(45°) = ?), Use the identity: 2sin(A)sin(B) = cos(A - B) - cos(A + B) (Ex: If A = 45° and B = 30°, 2sin(45°)sin(30°) = cos(15°) - cos(75°)).
+--------If Cosine (Ex: 2cos(30°)cos(45°) = ?), Use the identity: 2cos(A)cos(B) = cos(A + B) + cos(A - B) (Ex: If A = 45° and B = 30°, 2cos(45°)cos(30°) = cos(75°) + cos(15°)).
+--------If Mix of both (Ex: 2sin(30°)cos(45°) = ?), Use the identity: 2sin(A)cos(B) = sin(A + B) + sin(A - B) or 2cos(A)sin(B) = sin(A + B) - sin(A - B) (Ex: If A = 45° and B = 30°, 2sin(45°)cos(30°) = sin(75°) + sin(15°)).
