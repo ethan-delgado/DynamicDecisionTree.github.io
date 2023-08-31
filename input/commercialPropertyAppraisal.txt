@@ -1,4 +1,4 @@
-Does the commercial property being appraised have a valid legal description?
+Do you have a valid legal description that is sufficient to identify the exact commercial property?
 --If Yes, Can you physically inspect the property, both the interior and exterior?
 ----If Yes, Have you evaluated the structural integrity of the property (foundation, roof, façade, etc.) and its building systems such as HVAC, electrical, and plumbing?
 ------If Yes, Have you determined the value of the land itself, based on prices of similar commercial vacant lots in the area?
@@ -24,10 +24,10 @@ Does the commercial property being appraised have a valid legal description?
 ----------------If No, Which valuation approach will you use for the commercial property?
 ------------------If Cost approach, Calculate the final valuation by estimating the present cost of constructing a similar commercial property, factoring in depreciation (e.g.: If today's construction cost is $1.5M and depreciation is $250K, valuation is $1.25M)
 ------------------If Income Approach, Calculate the valuation by estimating net income based on similar commercial rentals, then dividing by the capitalization rate (e.g.: If net income is $70K and the capitalization rate is 7%, valuation is $1M)
---------------If No, Confirm any forthcoming developments and their potential impact on commercial property value. Redo the decision tree (e.g.: Factor in the potential value increase if a business park is being developed nearby)
-------------If No, Examine any zoning laws or use restrictions for the commercial property and their potential impact. Redo the decision tree (e.g.: If the property is zoned only for retail, adjust the valuation)
-----------If No, Assess local commercial amenities, special features, and environmental factors impacting value. Redo the decision tree (e.g.: Value may increase if it's close to a major convention center)
---------If No, Gauge the value of the land based on similar commercial vacant lots. Redo the decision tree (e.g.: If commercial lots are selling for $200K, factor this in)
+--------------If No, Confirm any upcoming developments and their potential impact on commercial property value. Redo the decision tree (e.g.: A business park being developed nearby may increase the value of the property by $40,000)
+------------If No, Examine any zoning laws or use restrictions for the commercial property and their potential impact. (e.g.: If the property is zoned only for retail, adjust the valuation). Redo the decision tree once finished.
+----------If No, Assess local commercial amenities, special features, and environmental factors impacting value. For example, nearby train station may increase the value of the land by $50,000, while a nearby polluting factory would decrease it by $75,000. Redo the decision tree once done.
+--------If No, Estimate the value of the land based on similar commercial vacant lots. Redo the decision tree (e.g.: If a similarly sized commercial lot is worth $5 per square foot and your lot is $30,000 square feet, your land itself is worth $150,000. Consider using multiple other vacant lots, averaging the price per square foot, to get a more accurate value)
 ------If No, Inspect the property's structural integrity and systems, then return to the decision tree (e.g.: Ensure the HVAC system is adequate for the building size)
 ----If No, Attempt to obtain access from the property owner for inspection. Afterwards, redo the decision tree (e.g.: Coordinate a site visit at a time convenient for existing tenants)
---If No, First, get a legal description for the commercial property. Once obtained, redo the decision tree (e.g.: Liaise with local authorities or consult legal documentation for the correct legal description)
+--If No, First, get a legal description for the commercial property. A legal description can usually be found in the most recent deed to the property. Consult local authorities or check legal documentation for the correct legal description. Once obtained, redo the decision tree.

@@ -4,7 +4,7 @@ Are you dealing with a right triangle?
 ------If Yes, Solve for a^2 + b^2 = c^2 where a and b are the respective leg lengths and c is the hypotenuse length (Ex: If a = 3, b = 4, find c: c = sqrt(3² + 4²) = 5).
 ------If No, Are you given a side length and an angle?
 --------If Yes, Are you given the hypotenuse or a leg??
-----------If Hypotenuse, Are you asked to find the side length adjacent or opposite to the given angle?
+----------If Hypotenuse, Are you asked to find the leg length adjacent or opposite to the given angle?
 ------------If Adjacent, Calculate the length of the leg by multiplying the hypotenuse length by the cosine of the given angle (Ex: If Hypotenuse = 5, angle = 60°, find Adjacent side: Adjacent = 5 * cos(60°) = 2.5).
 ------------If Opposite, Calculate the length of the leg by multiplying the hypotenuse length by the sine of the given angle (Ex: If Hypotenuse = 5, angle = 60°, find Opposite side: Opposite = 5 * sin(60°) ≈ 4.33).
 ----------If Leg, Is the given angle adjacent or opposite to the leg whose length you are asked to find?
@@ -21,7 +21,7 @@ Are you dealing with a right triangle?
 --------If Yes, Calculate the the angle by subtracting the given acute angle from 90 (Ex: If one acute angle is 30°, find other acute angle: Other Angle = 90 - 30 = 60°)
 --------If No, Try to use other methods to gain more information and help you find the angle.
 ----If Area, Are you given the lengths of two sides that form the right angle?
-------If Yes, Calculate the area as 1/2 * base * height (Ex: If base = 4 and height = 3, Area = 1/2 * 4 * 3 = 6).
+------If Yes, Calculate the area as 1/2 * first leg length * second leg length (Ex: If leg one = 4 and leg 2 = 3, Area = 1/2 * 4 * 3 = 6).
 ------If No, Try to use other methods to gain more information and help you find the area.
 ----If Height, Are you given the length of the hypotenuse and an angle?
 ------If Yes, Calculate the height as hypotenuse * sin(angle) (Ex: If hypotenuse = 5 and angle = 60°, height = 5 * sin(60°) ≈ 4.33).
