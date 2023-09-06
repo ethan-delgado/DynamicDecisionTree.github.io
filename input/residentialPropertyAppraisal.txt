@@ -1,4 +1,4 @@
-Is the residential property's legal description available and valid?
+Do you have a valid legal description that is sufficient to identify the exact residential property?
 --If Yes, Are you able to inspect the interior and exterior of the residential property in person?
 ----If Yes, Have you examined the home's structural elements (e.g., foundation, roof, walls) and its key systems (like plumbing, electrical, heating)?
 ------If Yes, Have you assessed the value of the actual land (based on prices of similar empty lots nearby)?
@@ -12,7 +12,7 @@ Is the residential property's legal description available and valid?
 ----------------------If Yes, Did you double-check all gathered data (like verifying room count, property size) and reflect on the property's past value (like old sales rates)?
 ------------------------If Yes, Draft your appraisal report considering all previous steps. Calculate the final estimated value drawing from recent sales of comparable homes nearby, adjusting for differences. (e.g., Add $7,000 for an additional bathroom in the subject property compared to a comparable)
 ------------------------If No, Re-check all details, ponder on the home's historical worth, and then draft your appraisal report. Adjust the valuation using the comparable sales method. (e.g., If the subject house has a basement, deduct $8,000 from a comparable without one)
-----------------------If No, Re-examine your market trends and adjust the comparables accordingly. Then, follow the decision tree again. (e.g., If the local market's falling, slash the comparables' value by 4%)
+----------------------If No, Re-examine your market trends and adjust the comparables accordingly. Then, follow the decision tree again. (e.g., If the local market's falling, decrease the comparables' value by 4%)
 --------------------If No, Undertake a fresh market trend assessment and fine-tune the comparables accordingly. Then, proceed with the decision tree. (e.g., Analyze sales trends in the locality over the past year and adjust comparables as needed)
 ------------------If No, Which methodology will you adopt for final property valuation?
 --------------------If Cost Approach (estimating construction cost for a similar home), Did you confirm all information (like exact property dimensions)?
@@ -24,10 +24,10 @@ Is the residential property's legal description available and valid?
 ----------------If No, Which methodology will you pick for final property valuation?
 ------------------If Cost Approach, Calculate the valuation by estimating the current building cost of a similar property minus depreciation. (e.g., Building a like property now costs $290,000 and after $35,000 depreciation, the value is $255,000)
 ------------------If Income Approach, Determine the valuation by estimating net income from potential rents of similar homes and dividing by the cap rate. (e.g., If net income is $16,000 and cap rate is 8%, valuation equals $200,000)
---------------If No, Research upcoming developments, gauge their value implications, and restart the decision tree. (e.g., A soon-to-be-built sports facility nearby might boost the property's worth)
-------------If No, Unearth any zoning or usage rules for the property and measure their effect on its worth. Revisit the decision tree afterward. (e.g., If the house is in a heritage zone, it might affect extension possibilities and value)
-----------If No, Look into local amenities, unique elements, and any environmental factors that could affect value. Then, refer back to the decision tree. (e.g., Proximity to a lake or special architectural facets can be a plus)
---------If No, Evaluate the land's worth based on similar empty lots nearby. Resume the decision tree afterward. (e.g., If comparable vacant lots are priced at $55,000 locally, include this in your value estimation)
-------If No, Inspect the home's structure and essential systems post-inspection. Then, follow the decision tree. (e.g., Scrutinize the basement for moisture issues, check the HVAC system, and review wiring)
+--------------If No, Research upcoming developments, gauge their value implications, and restart the decision tree. (e.g., An upcoming gym nearby might boost the property's value by $50,000)
+------------If No, Research any zoning or usage rules for the property and measure their effect on its worth. Revisit the decision tree once done. (e.g., If the house is in a heritage zone, the value of the property might be $30,000 less due to limited extension options)
+----------If No, Look into local amenities, unique elements, and any environmental factors that could affect value. Then, refer back to the decision tree. (e.g., Proximity to a lake or special architectural facets can add $20,000 to the property's value)
+--------If No, Evaluate the land's worth based on similar empty lots nearby. Resume the decision tree afterward. (e.g., If comparable vacant lots are priced at $80 per square foot, and your property is 1000 square feet, your land is worth $80,0000. Consider using multiple other vacant lots, averaging the price per square foot, to get a more accurate value)
+------If No, Inspect the home's structure and essential systems post-inspection. Then, follow the decision tree. (e.g., Scrutinize the basement for moisture issues, check the HVAC system, and review wiring. Any major issues can reduce the property's value significantly)
 ----If No, Attempt to secure the homeowner's consent for an in-person inspection. Post-inspection, use the decision tree. (e.g., Coordinate with the homeowner for a suitable time for the appraisal)
---If No, First, secure a legitimate legal description for the property. Once achieved, refer back to the decision tree. (e.g., Engage with legal experts or local administrative bodies for the right legal description)
+--If No, First, get a legal description for the commercial property. A legal description can usually be found in the most recent deed to the property. Consult local authorities or check legal documentation for the correct legal description. Once obtained, redo the decision tree.

@@ -1,30 +1,31 @@
-Does the lim n→∞ an equal to 0?
+Does the lim n→∞ of An equal to 0 (do the values in the series approach 0 as the number of terms increases)?
 --If Yes, is the series a known series?
-----If Geometric Series, is |r| < 1?
-------If Yes, the series converges to a1/1-r.
+----If Arithmetic Series (where each number is some constant added to the previous number), the series diverges.
+----If Geometric Series (where each number is some factor multiplied by the previous number), is the absolute value of the multiplication factor less than 1?
+------If Yes, the series converges to a1/1-r (the first term divided by 1 minus the multiplication factor).
 ------If No, the series diverges.
 ----If Harmonic Series, this series diverges.
-----If Alternating series, is |an| decreasing as n→∞?
-------If Yes, this series diverges.
-------If No, this series converges.
-----If P Series, is P > 1?
+----If Alternating series (where each term has the opposite sign of the previous term), is |an| decreasing as n→∞ (does the absolute value of each term decrease)?
+------If Yes, this series converges.
+------If No, this series diverges.
+----If P Series (where each term is 1 over n to some exponent, p), is p > 1?
 ------If Yes, the series converges.
 ------If No, the series diverges.
-----If No, is the series greater than a series known to diverge?
+----If None of the above, is the series greater than a series known to diverge (such as harmonic series, increasing Alternating Series, Arithmetic Series, increasing Geometric Series)?
 ------If Yes, the series diverges.
-------If No, is the series less than a series known to converge?
+------If No, is the series less than a series known to converge (such as decreasing Alternating Series, Decreasing Geometric Series, P Series where P > 1)?
 --------If Yes, the series converges.
 --------If No, can an integral of the sequence be taken?
-----------If Yes, does the improper integral from 1 to ∞ of an exist?
+----------If Yes, does the improper integral from 1 to ∞ of An exist?
 ------------If Yes, the series converges.
 ------------If No, does the limit as b→∞ of the integral from 1 to b of the sequence = +∞?
 --------------If Yes, the series diverges.
---------------If No, is lim n→∞|(an+1)/(an)| = 1?
+--------------If No, is lim n→∞|(an+1)/(an)| = 1 (is the limit as you approach the (n + 1)th term / nth term = 1)?
 ----------------If Yes, we cannot determine if the series converges or diverges.
 ----------------If No, is lim n→∞|(an+1)/(an)| < 1?
 ------------------If Yes, the series converges.
 ------------------If No, the series diverges.
-----------If No, is lim n→∞|(an+1)/(an)| = 1?
+----------If No, is lim n→∞|(an+1)/(an)| = 1 (is the limit as you approach the (n + 1)th term / nth term = 1)?
 ------------If Yes, we cannot determine if the series converges or diverges.
 ------------If No, is lim n→∞|(an+1)/(an)| < 1?
 --------------If Yes, the series converges.
