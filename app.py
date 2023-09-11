@@ -108,9 +108,9 @@ def get_sql():
     # cursor
     crsr = connection.cursor()
 
-    # print statement will execute if there
-    # are no errors
+    # print statement will execute if there are no errors
     print("Connected to the database")
+
 
     sql_command = """CREATE TABLE IF NOT EXISTS houses (
     house_number INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -119,12 +119,113 @@ def get_sql():
     square_feet INTEGER,
     swimming_pool CHAR(1));"""
     crsr.execute(sql_command)
-
+    
     # SQL command to insert the data in the table
-    sql_command = """INSERT INTO houses (house_name, num_of_bedrooms, square_feet, swimming_pool) VALUES (?, ?, ?, ?);"""
-    crsr.execute(sql_command, ("Goddard Hall", 1, 1600, 'N'))
-    crsr.execute(sql_command, ("Palladium Hall", 2, 3100, 'Y'))
-    crsr.execute(sql_command, ("Lipton Hall", 3, 3300, 'N'))
+    # sql_command = """INSERT INTO houses (house_name, num_of_bedrooms, square_feet, swimming_pool) VALUES (?, ?, ?, ?);"""
+    # crsr.execute(sql_command, ("Goddard Hall", 1, 1600, 'N'))
+    # crsr.execute(sql_command, ("Palladium Hall", 2, 3100, 'Y'))
+    # crsr.execute(sql_command, ("Lipton Hall", 3, 3300, 'N'))
+
+    sql_command = """DROP TABLE IF EXISTS comparableApproach;"""
+    crsr.execute(sql_command)
+
+    sql_command = """CREATE TABLE IF NOT EXISTS comparableInfo (
+    house_number INTEGER PRIMARY KEY AUTOINCREMENT,
+    address TEXT,
+    zip_code INTEGER,
+    sale_price INTEGER,
+    house_square_footage INTEGER,
+    bedroom_nums INTEGER,
+    bathroom_nums REAL,
+    amenities_cost INTEGER);"""
+    crsr.execute(sql_command)
+
+    sql_command = """INSERT INTO comparableInfo (address, zip_code, sale_price, house_square_footage, bedroom_nums, bathroom_nums, amenities_cost) VALUES (?, ?, ?, ?, ?, ?, ?);"""
+    crsr.execute(sql_command, ("57 Saxton St. Brooklyn, NY 11207", 11207, 500000, 1600, 3, 2, 50000))
+    crsr.execute(sql_command, ("9263 North Dunbar Street Jamaica, NY 11434", 11207,400000, 1500, 3, 2.5, 0))    
+    crsr.execute(sql_command, ("64 Foster St. Rego Park, NY 11374", 11207, 900000, 2000, 4, 3, 100000))
+
+    
+    sql_command = """CREATE TABLE IF NOT EXISTS costApproach (
+    lot_value INTEGER, 
+    replacement_cost_of_improvements INTEGER,
+    depreciation REAL);"""
+    crsr.execute(sql_command)
+
+    
+    sql_command = """INSERT INTO costApproach (lot_value, replacement_cost_of_improvements, depreciation) VALUES (?, ?, ?)"""
+    # crsr.execute(sql_command, (100000, 200000, 0.05))
+    # crsr.execute(sql_command, (150000, 220000, 0.03))
+    # crsr.execute(sql_command, (200000, 250000, 0.04))
+    # crsr.execute(sql_command, (175000, 230000, 0.06))
+    # crsr.execute(sql_command, (120000, 210000, 0.02))
+    # crsr.execute(sql_command, (160000, 260000, 0.07))
+    # crsr.execute(sql_command, (130000, 215000, 0.05))
+    # crsr.execute(sql_command, (110000, 190000, 0.01))
+    # crsr.execute(sql_command, (140000, 225000, 0.03))
+    # crsr.execute(sql_command, (125000, 240000, 0.04))
+    # crsr.execute(sql_command, (190000, 270000, 0.02))
+    # crsr.execute(sql_command, (180000, 260000, 0.03))
+    # crsr.execute(sql_command, (170000, 245000, 0.05))
+    # crsr.execute(sql_command, (135000, 205000, 0.06))
+    # crsr.execute(sql_command, (145000, 230000, 0.07))
+    # crsr.execute(sql_command, (115000, 220000, 0.01))
+    # crsr.execute(sql_command, (155000, 250000, 0.02))
+    # crsr.execute(sql_command, (165000, 265000, 0.04))
+    # crsr.execute(sql_command, (105000, 200000, 0.03))
+    # crsr.execute(sql_command, (195000, 280000, 0.05))
+    # crsr.execute(sql_command, (185000, 275000, 0.01))
+    # crsr.execute(sql_command, (210000, 290000, 0.02))
+    # crsr.execute(sql_command, (205000, 300000, 0.06))
+    # crsr.execute(sql_command, (215000, 310000, 0.04))
+    # crsr.execute(sql_command, (220000, 320000, 0.07))
+    # crsr.execute(sql_command, (230000, 330000, 0.01))
+    # crsr.execute(sql_command, (240000, 340000, 0.02))
+    # crsr.execute(sql_command, (250000, 350000, 0.03))
+    # crsr.execute(sql_command, (260000, 360000, 0.05))
+    # crsr.execute(sql_command, (270000, 370000, 0.06))
+    # crsr.execute(sql_command, (280000, 380000, 0.04))
+    # crsr.execute(sql_command, (290000, 390000, 0.07))
+    # crsr.execute(sql_command, (300000, 400000, 0.01))
+    # crsr.execute(sql_command, (310000, 410000, 0.02))
+    # crsr.execute(sql_command, (320000, 420000, 0.03))
+    # crsr.execute(sql_command, (330000, 430000, 0.05))
+    # crsr.execute(sql_command, (340000, 440000, 0.06))
+    # crsr.execute(sql_command, (350000, 450000, 0.04))
+    # crsr.execute(sql_command, (360000, 460000, 0.07))
+    # crsr.execute(sql_command, (370000, 470000, 0.01))
+    # crsr.execute(sql_command, (380000, 480000, 0.02))
+    # crsr.execute(sql_command, (390000, 490000, 0.03))
+    # crsr.execute(sql_command, (400000, 500000, 0.05))
+    # crsr.execute(sql_command, (410000, 510000, 0.06))
+    # crsr.execute(sql_command, (420000, 520000, 0.04))
+    # crsr.execute(sql_command, (430000, 530000, 0.07))
+    # crsr.execute(sql_command, (440000, 540000, 0.01))
+    # crsr.execute(sql_command, (450000, 550000, 0.02))
+    # crsr.execute(sql_command, (460000, 560000, 0.03))
+    # crsr.execute(sql_command, (470000, 570000, 0.05))
+    # crsr.execute(sql_command, (480000, 580000, 0.06))    
+
+
+    sql_command = """
+    CREATE TABLE IF NOT EXISTS incomeApproach (
+    comparable_monthly_rental_rates INTEGER,
+    monthly_operating_costs INTEGER,
+    capitalization_rate REAL);"""
+    crsr.execute(sql_command)
+
+    # sql_command = """INSERT INTO incomeApproach (comparable_monthly_rental_rates, monthly_operating_costs, capitalization_rate) VALUES(?, ?, ?)"""
+    # crsr.execute(sql_command, (2000, 500, 0.05))
+    # crsr.execute(sql_command, (3000, 800, 0.06))
+    # crsr.execute(sql_command, (1800, 450, 0.07))
+    # crsr.execute(sql_command, (2500, 600, 0.04))
+    # crsr.execute(sql_command, (4000, 1000, 0.08))
+    # crsr.execute(sql_command, (3200, 750, 0.05))    
+    # crsr.execute(sql_command, (1500, 400, 0.03))
+    # crsr.execute(sql_command, (3600, 900, 0.06))
+    # crsr.execute(sql_command, (2700, 650, 0.07))
+    # crsr.execute(sql_command, (2200, 550, 0.04))
+
 
     # Commit changes
     connection.commit()
@@ -140,56 +241,6 @@ def get_sql():
 
     return jsonify('', render_template('sql.html', x=sql_ans))
 
-    # # Create Property table
-    # sql_command = """
-    # CREATE TABLE IF NOT EXISTS Property (
-    #     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    #     legal_description TEXT NOT NULL,
-    #     address TEXT,
-    #     size REAL,
-    #     age INTEGER
-    # );
-    # """
-    # crsr.execute(sql_command)
-    #     # Create ComparableSales table
-    # sql_command = """
-    # CREATE TABLE [IF NOT EXISTS] ComparableSales (
-    #     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    #     property_id INTEGER,
-    #     comparable_address TEXT,
-    #     sale_date TEXT,
-    #     sale_price REAL,
-    #     FOREIGN KEY (property_id) REFERENCES Property(id)
-    # );
-    # """
-    # crsr.execute(sql_command)
-    # # Create AppraisalMethodology table
-    # sql_command = """
-    # CREATE TABLE [IF NOT EXISTS] AppraisalMethodology (
-    #     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    #     property_id INTEGER,
-    #     methodology_type TEXT CHECK(methodology_type IN ('Comparables Approach', 'Cost Approach', 'Income Approach')),
-    #     FOREIGN KEY (property_id) REFERENCES Property(id)
-    # );
-    # """
-    # crsr.execute(sql_command)
-    # # Create FinalValuation table
-    # sql_command = """
-    # CREATE TABLE [IF NOT EXISTS] FinalValuation (
-    #     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    #     property_id INTEGER,
-    #     estimated_value REAL,
-    #     valuation_date TEXT,
-    #     FOREIGN KEY (property_id) REFERENCES Property(id)
-    # );
-    # """
-    # crsr.execute(sql_command)
-
-    # # Insert sample data
-    # sql_command = """
-    # INSERT INTO Property (legal_description, address, size, age) VALUES ('Legal Description Here', '123 Main St, City, Country', 2000, 10);
-    # """
-    # crsr.execute(sql_command)
 
 
 if __name__ == "__main__":
