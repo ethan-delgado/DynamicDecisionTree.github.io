@@ -89,8 +89,8 @@ function rootNode() {
     if(s.includes("DOCUMENT") || s.includes("DECISIONTREE")) {
         let link_ref = '<a href="' + link + '" target="_blank">' + link + '</a>';
         s = s.substring(0, s_len) + link_ref;
-    }
-
+            }
+    
     // Shrink the node if the text is small. 
     if(s.length < 40) {
         by = 22;
@@ -124,7 +124,7 @@ function rootNode() {
 
         val += '<button class="btn btn-primary" onclick="selectClick()">Submit</button>';
     }
-
+    
     // console.log("check val: " + val);
     node.setTemplate(val);
     node.setBounds(new Rect(40, 10, bx, by));
@@ -267,6 +267,26 @@ function nextoption(id, originNode) {
     let s = str[id].substring(len + 1, str[id].length);
     console.log("Current Node: " + s);
 
+    // detect if text contains input and query
+    // Syntax: "INPUT: <input question> QUERY: <sql query> ending with question mark"
+    if (s.includes("INPUT") && s.includes("QUERY")) {
+        const userInput = prompt(s.substring(8, s.search("QUERY")));
+        let query = s.substring(s.search("QUERY") + 7);
+        if (userInput) {
+            // Send the input to the server
+            $.ajax({
+            url: "/input_query",
+            type: "POST",
+            contentType: "application/json",
+            async: false,
+            data: JSON.stringify({ "userInput": userInput, "query": query}),
+            success: function(response) {
+                s = response.toString();
+                console.log("s: " + s + s.toString());
+            }
+            });
+        }        
+    }
     // detect if the text contains link and add hypertext reference to the link
     let s_len = s.search("https");
     let link = s.substring(s_len, s.length);
@@ -416,7 +436,7 @@ function nextoption(id, originNode) {
             
             val += '</form>';
         }
-        
+                
         
         
         node.setTemplate(val);
@@ -629,7 +649,7 @@ function notSure(id, originNode) {
                     
                     val += '</form>';
                 }
-
+                
                 node.setTemplate(val);
 
                 node.setBounds(new Rect(originNode.getBounds().x, originNode.getBounds().y + 60, bx, by));
@@ -708,7 +728,7 @@ function showCheckbox(id, originNode, results) {
                     let link_ref = '<a href="' + dtlink + '" target="_blank">' + dtlink + '</a>';
                     s = s.substring(0, s_len) + link_ref;
                 }
-
+                
                 // detect and handle sql query
                 if(s.includes("SQL")) {
                     // We need this myCallback function because the code in ajax runs asynchronously. 
@@ -766,7 +786,7 @@ function showCheckbox(id, originNode, results) {
                             val += `<option value="NotSure">NotSure</option>`;
                             val += `</select></div>`;
                         }
-                        node.setTemplate(val);
+                                                node.setTemplate(val);
 
                         node.setBounds(new Rect(originNode.getBounds().x, originNode.getBounds().y + 60, bx, by));
                         // node.setLocked(true);
@@ -817,7 +837,7 @@ function showCheckbox(id, originNode, results) {
                         val += `<option value="NotSure">NotSure</option>`;
                         val += `</select></div>`;
                     }
-                    node.setTemplate(val);
+                                        node.setTemplate(val);
 
                     node.setBounds(new Rect(originNode.getBounds().x, originNode.getBounds().y + 60, bx, by));
                     // node.setLocked(true);

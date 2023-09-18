@@ -2,6 +2,7 @@ import json
 import sqlite3
 from flask import request
 from flask import Flask, render_template, jsonify
+import csv
 app = Flask(__name__)
 
 
@@ -126,24 +127,37 @@ def get_sql():
     # crsr.execute(sql_command, ("Palladium Hall", 2, 3100, 'Y'))
     # crsr.execute(sql_command, ("Lipton Hall", 3, 3300, 'N'))
 
-    sql_command = """DROP TABLE IF EXISTS comparableApproach;"""
-    crsr.execute(sql_command)
+    # sql_command = """DROP TABLE IF EXISTS comparableApproach;"""
+    # crsr.execute(sql_command)
 
     sql_command = """CREATE TABLE IF NOT EXISTS comparableInfo (
     house_number INTEGER PRIMARY KEY AUTOINCREMENT,
-    address TEXT,
-    zip_code INTEGER,
+    zip INTEGER,
     sale_price INTEGER,
     house_square_footage INTEGER,
-    bedroom_nums INTEGER,
-    bathroom_nums REAL,
-    amenities_cost INTEGER);"""
+    bedrooms INTEGER);"""
     crsr.execute(sql_command)
 
-    sql_command = """INSERT INTO comparableInfo (address, zip_code, sale_price, house_square_footage, bedroom_nums, bathroom_nums, amenities_cost) VALUES (?, ?, ?, ?, ?, ?, ?);"""
-    crsr.execute(sql_command, ("57 Saxton St. Brooklyn, NY 11207", 11207, 500000, 1600, 3, 2, 50000))
-    crsr.execute(sql_command, ("9263 North Dunbar Street Jamaica, NY 11434", 11207,400000, 1500, 3, 2.5, 0))    
-    crsr.execute(sql_command, ("64 Foster St. Rego Park, NY 11374", 11207, 900000, 2000, 4, 3, 100000))
+    with open('comparables_dataset.csv', 'r') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        next(csv_reader)  # Skip header row
+
+        # sql_insert_command = """INSERT INTO comparableInfo (zip, sale_price, house_square_footage, bedrooms) 
+        #                         VALUES (?, ?, ?, ?, ?, ?);"""
+
+        for row in csv_reader:
+            zip = int(row[0])  # 'zipcode' column
+            sale_price = int(row[1])  # 'price' column
+            house_square_footage = int(row[2])  # 'sqft_living' column
+            bedrooms = int(row[3])  # 'bedrooms' column
+
+            crsr.execute("""INSERT INTO comparableInfo (zip, sale_price, house_square_footage, bedrooms) 
+                                VALUES (?, ?, ?, ?, ?, ?);""", (zip, sale_price, house_square_footage, bedrooms))
+
+    # sql_command = """INSERT INTO comparableInfo (address, zip_code, sale_price, house_square_footage, bedroom_nums, bathroom_nums, amenities_cost) VALUES (?, ?, ?, ?, ?, ?, ?);"""
+    # crsr.execute(sql_command, ("57 Saxton St. Brooklyn, NY 11207", 11207, 500000, 1600, 3, 2, 50000))
+    # crsr.execute(sql_command, ("9263 North Dunbar Street Jamaica, NY 11434", 11207,400000, 1500, 3, 2.5, 0))    
+    # crsr.execute(sql_command, ("64 Foster St. Rego Park, NY 11374", 11207, 900000, 2000, 4, 3, 100000))
 
     
     sql_command = """CREATE TABLE IF NOT EXISTS costApproach (
@@ -153,7 +167,7 @@ def get_sql():
     crsr.execute(sql_command)
 
     
-    sql_command = """INSERT INTO costApproach (lot_value, replacement_cost_of_improvements, depreciation) VALUES (?, ?, ?)"""
+    # sql_command = """INSERT INTO costApproach (lot_value, replacement_cost_of_improvements, depreciation) VALUES (?, ?, ?)"""
     # crsr.execute(sql_command, (100000, 200000, 0.05))
     # crsr.execute(sql_command, (150000, 220000, 0.03))
     # crsr.execute(sql_command, (200000, 250000, 0.04))
@@ -240,6 +254,26 @@ def get_sql():
     connection.close()
 
     return jsonify('', render_template('sql.html', x=sql_ans))
+
+
+@app.route('/input_query', methods=['POST'])
+def input_query():
+    data = request.get_json()
+    input_number = data.get("userInput")
+    query = data.get("query")    
+    # Connect to SQLite database
+    connection = sqlite3.connect("dt.db")
+    crsr = connection.cursor()
+    
+    # Execute SQL query based on the input_number
+    crsr.execute(query, (input_number,))
+    result = crsr.fetchall()
+    
+    # Close the connection
+    connection.close()
+    
+    return jsonify(result)
+
 
 
 
