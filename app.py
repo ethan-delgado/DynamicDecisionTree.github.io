@@ -2,7 +2,6 @@ import json
 import sqlite3
 from flask import request
 from flask import Flask, render_template, jsonify
-# import pandas as pd
 import csv
 app = Flask(__name__)
 
@@ -31,21 +30,21 @@ def root_to_curr():
     # it is called after users answer the question of the box, and when the new box appreas
     # output: the variable storing the path
     output = request.get_json()
-    print(output)
-    print(type(output))
-    result = json.loads(output)
-    print(result)
-    print(type(result))
+    # print(output)
+    # print(type(output))
+    query_result = json.loads(output)
+    # print(query_result)
+    # print(type(query_result))
 
     f = open('root_to_curr.txt', 'a')
-    for i in range(len(result)):
+    for i in range(len(query_result)):
         i_str = str(i)
-        if '-' not in result[i_str]:
+        if '-' not in query_result[i_str]:
             f.write('\n')
-        f.write(result[i_str])
+        f.write(query_result[i_str])
         f.write('\n')
 
-    return result
+    return query_result
 
 
 @app.route('/root_to_keyword', methods=['POST'])
@@ -54,54 +53,54 @@ def root_to_desired():
     # it is called when the users search a box through keyword
     # output: the variable storing the path
     output = request.get_json()
-    print(output)
-    print(type(output))
-    result = json.loads(output)
-    print(result)
-    print(type(result))
+    # print(output)
+    # print(type(output))
+    query_result = json.loads(output)
+    # print(query_result)
+    # print(type(query_result))
 
     f = open('root_to_keyword.txt', 'w')
-    for i in range(len(result)):
+    for i in range(len(query_result)):
         i_str = str(i)
-        f.write(result[i_str])
+        f.write(query_result[i_str])
         f.write('\n')
 
-    return result
+    return query_result
 
 
 @app.route('/get_subtree', methods=['POST'])
 def get_subtree():
     # saving the subtree as a txt file
     # it is called when users click the radio button "Nodes reachable from the path/tree so far", and then click "submit"
-    # output: the variable storing th path result
+    # output: the variable storing th path query_result
     output = request.get_json()
-    print(output)
-    print(type(output))
-    result = json.loads(output)
-    print(result)
-    print(type(result))
+    # print(output)
+    # print(type(output))
+    query_result = json.loads(output)
+    # print(query_result)
+    # print(type(query_result))
 
     f = open('root_to_keyword.txt', 'a')
-    for i in range(len(result)):
+    for i in range(len(query_result)):
         i_str = str(i)
-        f.write(result[i_str])
+        f.write(query_result[i_str])
         f.write('\n')
 
     f.write('\n')
-    return result
+    return query_result
 
 
 @app.route('/get_sql', methods=['POST'])
 def get_sql():
     # and execute the sql command sent from the tree.js through ajax.
     # it is called when the text in the new box is a sql command.
-    # output: send the result of the sql command back to tree.js
+    # output: send the query_result of the sql command back to tree.js
     output = request.get_json()
-    print(output)
-    print(type(output))
-    result = json.loads(output)
-    print(result)
-    print(type(result))
+    # print(output)
+    # print(type(output))
+    query_result = json.loads(output)
+    # print(query_result)
+    # print(type(query_result))
 
     # connecting to the database
     connection = sqlite3.connect("dt.db")
@@ -128,33 +127,50 @@ def get_sql():
     # # crsr.execute(sql_command, ("Lipton Hall", 3, 3300, 'N'))
 
 
-    # sql_command = """DROP TABLE IF EXISTS comparableInfo;"""
-    # crsr.execute(sql_command)
 
-    sql_command = """CREATE TABLE IF NOT EXISTS comparableInfo (
+    sql_command = """CREATE TABLE IF NOT EXISTS comps (
     house_number INTEGER PRIMARY KEY AUTOINCREMENT,
-    zip INTEGER,
-    sale_price INTEGER,
-    house_square_footage INTEGER,
-    bedrooms INTEGER);"""
+    id INTEGER,
+    date TEXT,
+    price INTEGER,
+    bedrooms INTEGER,
+    bathrooms REAL,
+    sqft_living INTEGER,
+    sqft_lot,floors INTEGER,
+    waterfront INTEGER,
+    view INTEGER,
+    condition INTEGER,
+    grade INTEGER,
+    sqft_above INTEGER,
+    sqft_basement INTEGER,
+    yr_built INTEGER,
+    yr_renovated INTEGER,
+    zipcode INTEGER,
+    lat REAL,
+    long REAL,
+    sqft_living15 INTEGER,
+    sqft_lot15 INTEGER);"""
     crsr.execute(sql_command)
 
-    # populates comparableInfo table with data from comparables_dataset.csv
-    # with open('comparables_dataset.csv', 'r') as csv_file:
+    # # populates comparableInfo table with data from comparables_dataset.csv
+    # with open('datasets/kentucky_comps.csv', 'r') as csv_file:
     #         csv_reader = csv.reader(csv_file)
     #         next(csv_reader)  # Skip header row
 
-    #         sql_insert_command = """INSERT INTO comparableInfo (zip, sale_price, house_square_footage, bedrooms) 
-    #                                 VALUES (?, ?, ?, ?);"""
+    #         sql_insert_command = """INSERT INTO comps (id,date,price,bedrooms,bathrooms,sqft_living,sqft_lot,floors,waterfront,view,condition,grade,sqft_above,sqft_basement,yr_built,yr_renovated,zipcode,lat,long,sqft_living15,sqft_lot15) 
+    #                                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"""
 
     #         # Step 4: Insert Data
     #         for row in csv_reader:
-    #             zip_code = int(row[0])  # 'zipcode' column
-    #             sale_price = int(row[1])  # 'price' column
-    #             house_square_footage = int(row[2])  # 'sqft_living' column
-    #             bedrooms = int(row[3])  # 'bedrooms' column
+    #             # values.append(row)
+    #             # zip_code = int(row[0])  # 'zipcode' column
+    #             # sale_price = int(row[1])  # 'price' column
+    #             # house_square_footage = int(row[2])  # 'sqft_living' column
+    #             # bedrooms = int(row[3])  # 'bedrooms' column
 
-    #             crsr.execute(sql_insert_command, (zip_code, sale_price, house_square_footage, bedrooms))
+    #             # crsr.execute(sql_insert_command, (zip_code, sale_price, house_square_footage, bedrooms))
+    #             crsr.execute(sql_insert_command, (row))
+
 
     
     sql_command = """CREATE TABLE IF NOT EXISTS costApproach (
@@ -238,14 +254,36 @@ def get_sql():
     # # crsr.execute(sql_command, (2200, 550, 0.04))
 
 
+    sql_command = """DROP TABLE IF EXISTS federalTaxRates;"""
+    crsr.execute(sql_command)
+
+    sql_command = """DROP TABLE IF EXISTS federal_tax_rates;"""
+    crsr.execute(sql_command)
+
+    sql_command = """CREATE TABLE IF NOT EXISTS federal_tax_rates (
+    bracket_tax_rate INTEGER,
+    max_income_single INTEGER,
+    max_income_married INTEGER,
+    max_head_of_household INTEGER);"""
+    crsr.execute(sql_command)
+
+    # with open('datasets/tax_brackets.csv', 'r') as csv_file:
+    #     csv_reader = csv.reader(csv_file)
+    #     next(csv_reader)  # Skip header row
+
+    #     sql_insert_command = """INSERT INTO federal_tax_rates (bracket_tax_rate, max_income_single, max_income_married, max_head_of_household) VALUES (?, ?, ?, ?);"""
+
+    #     for row in csv_reader:
+    #         crsr.execute(sql_insert_command, (row))
+
     # Commit changes
     connection.commit()
 
-    crsr.execute(result['0'])
+    crsr.execute(query_result['0'])
     sql_ans = crsr.fetchall()
 
-    for i in sql_ans:
-        print(i)
+    # for i in sql_ans:
+    #     print(i)
 
     # close the connection
     connection.close()
@@ -253,24 +291,48 @@ def get_sql():
     return jsonify('', render_template('sql.html', x=sql_ans))
 
 
-@app.route('/input_query', methods=['POST'])
-def input_query():
+
+@app.route('/input_query_result', methods=['POST'])
+def input_query_result():
     data = request.get_json()
-    input_number = data.get("userInput")
-    query = data.get("query")    
-    # Connect to SQLite database
+    query = data.get("query")
+    cur_query = query
+    all_inputs = data.get("allInputs")
+    result = data.get("resultStr")
+    # print(result)
+    # print("all_inputs: ", all_inputs)
+
+    for key in all_inputs:
+        cur_query = cur_query.replace(key, all_inputs[key])
+
+        
+
+    # Connect to database
     connection = sqlite3.connect("dt.db")
     crsr = connection.cursor()
     
-    # Execute SQL query based on the input_number
-    crsr.execute(query, (input_number,))
-    result = crsr.fetchall()
+    print(cur_query)
+    if ";" not in cur_query:
+        crsr.execute(cur_query)
+    else:
+        crsr.executescript(cur_query)
+    query_result = crsr.fetchall()
     
     # Close the connection
     connection.close()
-    
-    return jsonify(result)
 
+    
+
+    # Convert query_result to string and truncate outer parentheses and last comma
+    query_result = ' '.join([str(elem) for elem in query_result])[1:-2]
+    print("Query result: ", query_result)
+
+    if result == "":
+        return jsonify("Query result: " + query_result)
+    elif "RESULT" in result:
+        result = result.replace("RESULT" + query_result) 
+        
+    return jsonify(result)
 
 
 

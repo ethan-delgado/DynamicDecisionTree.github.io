@@ -259,34 +259,51 @@ function selectClick(e, sender) {
 // the function creates and shows a single next box. 
 // Input: id is the id of the current box, and originNode is the current box object
 // No return output
+var allInputs = {};
 function nextoption(id, originNode) {
     currTreeIdList.push(parseInt(id));
     let ifCheckbox = false;
     var node = new MindFusion.Diagramming.ControlNode(diagram);
     let len = str[id].search(',');
     let s = str[id].substring(len + 1, str[id].length);
+    let curInputKey = "";
     console.log("Current Node: " + s);
 
     // detect if text contains input and query
-    // Syntax: "INPUT: <input question> QUERY: <sql query> ending with question mark"
-    if (s.includes("INPUT") && s.includes("QUERY")) {
-        const userInput = prompt(s.substring(8, s.search("QUERY")));
-        let query = s.substring(s.search("QUERY") + 7);
+    // Syntax: "INPUT: <input question> QUERY: <sql query> RETURN: <result string - with 'RESULT' to be replaced by the result of the query>"
+    if (s.includes("INPUT") && s.includes("QUERY:")) {
+        if (s[s.length - 1] == '?'){
+            s = s.substring(0, s.length - 1)
+        } 
+        let userInput = prompt(s.substring(8, s.search("QUERY:")));
+        curInputKey = s.substring(s.search("INPUT"), s.search(":"))
+        console.log("curInputKey: " + curInputKey);
+        allInputs[curInputKey] = userInput;
+        // allInputs.push(userInput);
+        let query = s.substring(s.search("QUERY:") + 7);
+        let resultStr = "";
+
+        if (s.includes("RETURN:")) {
+            query = query.substring(0, query.search("RETURN:"));
+            resultStr = s.substring(s.search("RETURN:") + 7);
+        }
+
         if (userInput) {
             // Send the input to the server
             $.ajax({
-            url: "/input_query",
-            type: "POST",
-            contentType: "application/json",
-            async: false,
-            data: JSON.stringify({ "userInput": userInput, "query": query}),
-            success: function(response) {
-                s = response.toString();
-                console.log("s: " + s + s.toString());
-            }
+                url: "/input_query_result",
+                type: "POST",
+                contentType: "application/json",
+                async: false,
+                data: JSON.stringify({"query": query, "allInputs": allInputs, "resultStr": resultStr}),
+                success: function(response) {
+                    s = response.toString();
+                    console.log("s: " + s + s.toString());
+                }
             });
+         }
         }        
-    }
+    
     // detect if the text contains link and add hypertext reference to the link
     let s_len = s.search("https");
     let link = s.substring(s_len, s.length);
