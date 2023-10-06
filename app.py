@@ -152,7 +152,7 @@ def get_sql():
     sqft_lot15 INTEGER);"""
     crsr.execute(sql_command)
 
-    # # populates comparableInfo table with data from comparables_dataset.csv
+    # # populates comps table with data from comparables_dataset.csv
     # with open('datasets/kentucky_comps.csv', 'r') as csv_file:
     #         csv_reader = csv.reader(csv_file)
     #         next(csv_reader)  # Skip header row
@@ -171,107 +171,22 @@ def get_sql():
     #             # crsr.execute(sql_insert_command, (zip_code, sale_price, house_square_footage, bedrooms))
     #             crsr.execute(sql_insert_command, (row))
 
-
-    
-    sql_command = """CREATE TABLE IF NOT EXISTS costApproach (
-    lot_value INTEGER, 
-    replacement_cost_of_improvements INTEGER,
-    depreciation REAL);"""
-    crsr.execute(sql_command)
-
-    
-    # # sql_command = """INSERT INTO costApproach (lot_value, replacement_cost_of_improvements, depreciation) VALUES (?, ?, ?)"""
-    # # crsr.execute(sql_command, (100000, 200000, 0.05))
-    # # crsr.execute(sql_command, (150000, 220000, 0.03))
-    # # crsr.execute(sql_command, (200000, 250000, 0.04))
-    # # crsr.execute(sql_command, (175000, 230000, 0.06))
-    # # crsr.execute(sql_command, (120000, 210000, 0.02))
-    # # crsr.execute(sql_command, (160000, 260000, 0.07))
-    # # crsr.execute(sql_command, (130000, 215000, 0.05))
-    # # crsr.execute(sql_command, (110000, 190000, 0.01))
-    # # crsr.execute(sql_command, (140000, 225000, 0.03))
-    # # crsr.execute(sql_command, (125000, 240000, 0.04))
-    # # crsr.execute(sql_command, (190000, 270000, 0.02))
-    # # crsr.execute(sql_command, (180000, 260000, 0.03))
-    # # crsr.execute(sql_command, (170000, 245000, 0.05))
-    # # crsr.execute(sql_command, (135000, 205000, 0.06))
-    # # crsr.execute(sql_command, (145000, 230000, 0.07))
-    # # crsr.execute(sql_command, (115000, 220000, 0.01))
-    # # crsr.execute(sql_command, (155000, 250000, 0.02))
-    # # crsr.execute(sql_command, (165000, 265000, 0.04))
-    # # crsr.execute(sql_command, (105000, 200000, 0.03))
-    # # crsr.execute(sql_command, (195000, 280000, 0.05))
-    # # crsr.execute(sql_command, (185000, 275000, 0.01))
-    # # crsr.execute(sql_command, (210000, 290000, 0.02))
-    # # crsr.execute(sql_command, (205000, 300000, 0.06))
-    # # crsr.execute(sql_command, (215000, 310000, 0.04))
-    # # crsr.execute(sql_command, (220000, 320000, 0.07))
-    # # crsr.execute(sql_command, (230000, 330000, 0.01))
-    # # crsr.execute(sql_command, (240000, 340000, 0.02))
-    # # crsr.execute(sql_command, (250000, 350000, 0.03))
-    # # crsr.execute(sql_command, (260000, 360000, 0.05))
-    # # crsr.execute(sql_command, (270000, 370000, 0.06))
-    # # crsr.execute(sql_command, (280000, 380000, 0.04))
-    # # crsr.execute(sql_command, (290000, 390000, 0.07))
-    # # crsr.execute(sql_command, (300000, 400000, 0.01))
-    # # crsr.execute(sql_command, (310000, 410000, 0.02))
-    # # crsr.execute(sql_command, (320000, 420000, 0.03))
-    # # crsr.execute(sql_command, (330000, 430000, 0.05))
-    # # crsr.execute(sql_command, (340000, 440000, 0.06))
-    # # crsr.execute(sql_command, (350000, 450000, 0.04))
-    # # crsr.execute(sql_command, (360000, 460000, 0.07))
-    # # crsr.execute(sql_command, (370000, 470000, 0.01))
-    # # crsr.execute(sql_command, (380000, 480000, 0.02))
-    # # crsr.execute(sql_command, (390000, 490000, 0.03))
-    # # crsr.execute(sql_command, (400000, 500000, 0.05))
-    # # crsr.execute(sql_command, (410000, 510000, 0.06))
-    # # crsr.execute(sql_command, (420000, 520000, 0.04))
-    # # crsr.execute(sql_command, (430000, 530000, 0.07))
-    # # crsr.execute(sql_command, (440000, 540000, 0.01))
-    # # crsr.execute(sql_command, (450000, 550000, 0.02))
-    # # crsr.execute(sql_command, (460000, 560000, 0.03))
-    # # crsr.execute(sql_command, (470000, 570000, 0.05))
-    # # crsr.execute(sql_command, (480000, 580000, 0.06))    
-
-
-    sql_command = """
-    CREATE TABLE IF NOT EXISTS incomeApproach (
-    comparable_monthly_rental_rates INTEGER,
-    monthly_operating_costs INTEGER,
-    capitalization_rate REAL);"""
-    crsr.execute(sql_command)
-
-    # # sql_command = """INSERT INTO incomeApproach (comparable_monthly_rental_rates, monthly_operating_costs, capitalization_rate) VALUES(?, ?, ?)"""
-    # # crsr.execute(sql_command, (2000, 500, 0.05))
-    # # crsr.execute(sql_command, (3000, 800, 0.06))
-    # # crsr.execute(sql_command, (1800, 450, 0.07))
-    # # crsr.execute(sql_command, (2500, 600, 0.04))
-    # # crsr.execute(sql_command, (4000, 1000, 0.08))
-    # # crsr.execute(sql_command, (3200, 750, 0.05))    
-    # # crsr.execute(sql_command, (1500, 400, 0.03))
-    # # crsr.execute(sql_command, (3600, 900, 0.06))
-    # # crsr.execute(sql_command, (2700, 650, 0.07))
-    # # crsr.execute(sql_command, (2200, 550, 0.04))
-
-
-    sql_command = """DROP TABLE IF EXISTS federalTaxRates;"""
-    crsr.execute(sql_command)
-
-    sql_command = """DROP TABLE IF EXISTS federal_tax_rates;"""
-    crsr.execute(sql_command)
-
     sql_command = """CREATE TABLE IF NOT EXISTS federal_tax_rates (
     bracket_tax_rate INTEGER,
+    min_income_single INTEGER,
     max_income_single INTEGER,
+    min_income_married INTEGER,
     max_income_married INTEGER,
+    min_income_head_of_household INTEGER,
     max_head_of_household INTEGER);"""
     crsr.execute(sql_command)
 
-    # with open('datasets/tax_brackets.csv', 'r') as csv_file:
+    # populates federal_tax_rates table with data from tax_brackets.csv
+    # with open('datasets/federal_tax_brackets.csv', 'r') as csv_file:
     #     csv_reader = csv.reader(csv_file)
     #     next(csv_reader)  # Skip header row
 
-    #     sql_insert_command = """INSERT INTO federal_tax_rates (bracket_tax_rate, max_income_single, max_income_married, max_head_of_household) VALUES (?, ?, ?, ?);"""
+    #     sql_insert_command = """INSERT INTO federal_tax_rates (bracket_tax_rate, min_income_single, max_income_single, min_income_married, max_income_married, min_income_head_of_household, max_head_of_household) VALUES (?, ?, ?, ?, ?, ?, ?);"""
 
     #     for row in csv_reader:
     #         crsr.execute(sql_insert_command, (row))
@@ -300,10 +215,12 @@ def input_query_result():
     all_inputs = data.get("allInputs")
     result = data.get("resultStr")
     # print(result)
-    # print("all_inputs: ", all_inputs)
+    print("all_inputs: ", all_inputs)
 
+    # Replace INPUTX keywords with corresponding input values based on key-value pairs in all_inputs
     for key in all_inputs:
         cur_query = cur_query.replace(key, all_inputs[key])
+        print("Query after key-value replacement: " + cur_query)
 
         
 
@@ -312,25 +229,29 @@ def input_query_result():
     crsr = connection.cursor()
     
     print(cur_query)
-    if ";" not in cur_query:
+    try:
         crsr.execute(cur_query)
-    else:
-        crsr.executescript(cur_query)
-    query_result = crsr.fetchall()
-    
+        query_result = crsr.fetchall()
+        # Convert query_result to string and truncate outer parentheses and last comma
+        query_result = ' '.join([str(elem) for elem in query_result])[1:-2]
+        if query_result == "":
+            query_result = "No query results found."
+        print("Query result: " + query_result)
+    except Exception as e:
+        query_result = repr(e)
+        print("Error " + query_result)
+        return jsonify(query_result + ". Please check your query and try again.")
     # Close the connection
     connection.close()
 
     
 
-    # Convert query_result to string and truncate outer parentheses and last comma
-    query_result = ' '.join([str(elem) for elem in query_result])[1:-2]
-    print("Query result: ", query_result)
+
 
     if result == "":
-        return jsonify("Query result: " + query_result)
+        return jsonify(query_result)
     elif "RESULT" in result:
-        result = result.replace("RESULT" + query_result) 
+        result = result.replace("RESULT", query_result) 
         
     return jsonify(result)
 

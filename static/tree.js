@@ -275,9 +275,9 @@ function nextoption(id, originNode) {
         if (s[s.length - 1] == '?'){
             s = s.substring(0, s.length - 1)
         } 
-        let userInput = prompt(s.substring(8, s.search("QUERY:")));
-        curInputKey = s.substring(s.search("INPUT"), s.search(":"))
+        curInputKey = s.substring(s.search("INPUT"), s.search(":"));
         console.log("curInputKey: " + curInputKey);
+        let userInput = prompt(s.substring(8, s.search("QUERY:")));
         allInputs[curInputKey] = userInput;
         // allInputs.push(userInput);
         let query = s.substring(s.search("QUERY:") + 7);
@@ -288,7 +288,7 @@ function nextoption(id, originNode) {
             resultStr = s.substring(s.search("RETURN:") + 7);
         }
 
-        if (userInput) {
+        if (userInput != null) {
             // Send the input to the server
             $.ajax({
                 url: "/input_query_result",
